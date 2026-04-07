@@ -39,4 +39,5 @@ See [`workflow/Transform-Image.json`](workflow/Transform-Image.json) for a worki
 |---|---|
 | **Company** | Deepsoch AI Private Limited |
 | **Developer** | Karim Khan |
+| **Website** | [deepsoch.com](https://deepsoch.com) |
 | **Contact** | [deepsoch.ai@gmail.com](mailto:deepsoch.ai@gmail.com) |

@@ -16,6 +16,7 @@ below should never actually run on the backend. They exist only as
 fallbacks in case a node somehow slips through to execution.
 """
 
+from ...core.branding import describe
 from ...core.categories import UTIL
 
 
@@ -38,6 +39,11 @@ ANY = _AnyType("*")
 class DeepSochSetNode:
     """Stub for the wireless Set node. Real UI/behavior lives in JS."""
 
+    DESCRIPTION = describe(
+        "Wireless reroute — store any value under a name. Pair with a "
+        "Get Node anywhere in the graph to retrieve it without drawing wires."
+    )
+
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -58,6 +64,11 @@ class DeepSochSetNode:
 
 class DeepSochGetNode:
     """Stub for the wireless Get node. Real UI/behavior lives in JS."""
+
+    DESCRIPTION = describe(
+        "Wireless reroute — retrieve a value previously stored by a "
+        "matching Set Node. Lets you span the graph without long wires."
+    )
 
     @classmethod
     def INPUT_TYPES(cls):

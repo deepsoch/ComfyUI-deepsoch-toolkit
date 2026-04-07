@@ -11,6 +11,7 @@ import json
 import os
 from typing import Any
 
+from ...core.branding import describe
 from ...core.categories import IMAGE
 
 
@@ -53,6 +54,12 @@ def _resolve_input_path(name: str) -> str:
 
 class DeepSochLoadImages:
     """Upload and emit a list of images. UI provided by `web/load_images.js`."""
+
+    DESCRIPTION = describe(
+        "Upload one or many images and emit them as a list. "
+        "Native-style multi-image preview with grid view, "
+        "click-to-fullscreen and counter cycling."
+    )
 
     @classmethod
     def INPUT_TYPES(cls) -> dict[str, Any]:

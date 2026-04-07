@@ -16,6 +16,7 @@ Preset storage:
 
 from typing import Any
 
+from ...core.branding import describe
 from ...core.categories import PROMPT
 from ...core.io import load_json
 from ...core.paths import PRESETS_DIR, USER_PRESETS_DIR, ensure_user_dirs
@@ -36,6 +37,12 @@ def _load_all_presets() -> dict[str, str]:
 
 class DeepSochPromptPreset:
     """Outputs one or many prompts from ticked presets and/or a custom prompt."""
+
+    DESCRIPTION = describe(
+        "Tick one or more style presets and emit them as a prompt list. "
+        "Each ticked preset re-runs the downstream chain independently, "
+        "so N presets produce N styled outputs in a single queue."
+    )
 
     @classmethod
     def INPUT_TYPES(cls) -> dict[str, Any]:
