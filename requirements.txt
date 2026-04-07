@@ -1,0 +1,2 @@
+# DeepSoch Toolkit has no third-party dependencies yet.
+# Add new requirements here as future nodes need them.
